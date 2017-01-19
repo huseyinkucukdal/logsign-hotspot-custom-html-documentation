@@ -1,0 +1,50 @@
+<div ng-show="portal.register_mode=='login'" >
+    <form name="login_form" ng-submit="login();" ng-show="portal.user_settings.login_type != ''">
+        <div class="form-group" ng-show="portal.user_settings.login_type=='username_password'">
+            {{'Username :'|translate}}<br />
+            <input type="text" ng-model="form.username" placeholder="{{'User Name'|translate}}" ng-required="portal.user_settings.login_type=='username_password'"  class="form-control"/>
+        </div>
+        <div class="form-group" ng-show="portal.user_settings.login_type=='gsm_password'">
+            {{'Gsm Number :'|translate}}<br />
+            <phonenumber-directive ng-cookie-value="form.username" placeholder="'5xx4121356'" model='form.username' ng-required="portal.user_settings.login_type=='gsm_password'" ></phonenumber-directive>
+        </div>
+        <div class="form-group">
+            {{'Password :'|translate}}<br />
+            <input type="password" ng-model="form.password" placeholder="{{'Password'|translate}}" required class="form-control"/>
+        </div>
+
+        <div class="form-group">
+            <input type="checkbox" ng-model="portal.remember_me"/> {{'Remember me'|translate}}
+        </div>
+
+        <div class="form-group" ng-show="portal.viewSettings.terms_of_use_checked">
+            <label class="control-label">
+                <input type="checkbox" ng-model="form.terms_of_use_checked" ng-required="portal.viewSettings.terms_of_use_checked"/>
+                {{'I agree to Terms of Use'|translate}}
+            </label>
+        </div>
+
+        <div class="form-group" ng-show="portal.viewSettings.terms_of_use_checked">
+            <div id="authentication_text_area">
+                <p ng-bind-html="portal.viewSettings['terms_of_use_'+portal.viewSettings.lang]"></p>
+            </div>
+        </div>
+        <div>
+
+            <div class="alert alert-success form_last_response" ng-show="portal.lastResponse">{{portal.lastResponse|translate}}</div>
+
+            <button id="login_username" type="submit" ng-disabled="login_form.$invalid || portal.is_submit" class="btn btn-primary btn-block">
+                {{'Login'|translate}}
+            </button>
+
+            <div ng-show="portal.isMacEditEnabled">
+                <br>
+                <a href="#/mac_edit" class="btn btn-primary btn-block">
+                    {{'Edit Mac Addresses'|translate}}
+                </a>
+            </div>
+
+        </div>
+    </form>
+
+</div>

@@ -1,0 +1,59 @@
+<form ng-submit="sendSms()" name="sms_form" ng-show="portal.register_mode=='sign_up_sms' || portal.register_mode=='sign_up_passport_number'" novalidate>
+    <div class="form-group" ng-show="portal.user_settings.show_name_field">
+        {{'Name :'|translate}}<br />
+        <input type="text" ng-model="portal.form.name" capitalize placeholder='{{"Name"|translate}}' ng-required="portal.user_settings.show_name_field"  class="form-control">
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_last_name_field">
+        {{'Last Name :'|translate}}<br/>
+        <input type="text" ng-model="portal.form.lastName" capitalize placeholder='{{"Last Name"|translate}}' ng-required="portal.user_settings.show_last_name_field"  class="form-control">
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_date_of_birth_field">
+        {{'Birth Year'|translate}} :<br/>
+        <input type="text" ng-model="portal.form.birthYear" ng-maxlength="4" placeholder="1970" ng-required="portal.user_settings.show_date_of_birth_field" class="form-control" maxlength="4"/>
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_tc_no_field">
+        {{'Citizenship Number :'|translate}}<br/>
+        <input type="number" ng-model="portal.form.citizenshipNumber" placeholder='{{"Citizenship Number"|translate}}' min="0" pattern="\d*" ng-required="portal.user_settings.show_tc_no_field" class="form-control">
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_email_field">
+        {{'Email'|translate}} : <br/>
+        <input type="email" ng-model="portal.form.email" placeholder='{{"Email"|translate}}' ng-required="portal.user_settings.show_email_field" class="form-control">
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_passport_field || portal.register_mode=='sign_up_passport_number'">
+        {{'Passport Number :'|translate}}<br/>
+        <input type="text" ng-model="portal.form.passport"  class="form-control" ng-required="portal.register_mode=='sign_up_passport_number'">
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_details_field">
+        {{'Details :'|translate}}<br/>
+        <input type="text" ng-model="portal.form.details"  class="form-control">
+    </div>
+
+    <div class="form-group">
+        {{'Gsm Number :'|translate}}<br/>
+        <phonenumber-directive placeholder="'5xx4121356'" ng-required="true" model='portal.form.dstgsm'></phonenumber-directive>
+    </div>
+
+    <div class="form-group" ng-show="portal.viewSettings.terms_of_use_checked">
+        <label class="control-label">
+            <input type="checkbox" ng-model="form.terms_of_use_checked" ng-required="portal.viewSettings.terms_of_use_checked"/>
+            {{'I agree to Terms of Use'|translate}}
+        </label>
+    </div>
+
+    <div ng-show="portal.viewSettings.terms_of_use_checked" id="authentication_text_area">
+        <p ng-bind-html="portal.viewSettings['terms_of_use_'+portal.viewSettings.lang]"></p>
+    </div>
+
+
+    <div class="alert alert-success form_last_response" ng-show="portal.lastResponse">{{portal.lastResponse|translate}}</div>
+
+    <button type="submit" ng-disabled="sms_form.$invalid || portal.is_submit" class="btn btn-primary btn-block">
+        {{'Send'|translate}}
+    </button>
+</form>

@@ -1,0 +1,18 @@
+<div ng-show="portal.register_mode=='first_login_change_password'">
+    <form name="first_login_change_password_form" ng-submit="firstLoginChangePassword()">
+        <div class="form-group">
+            {{'New Password'|translate}}<br />
+            <input type="password" ng-model="formChangePassword.pass1" placeholder="***" required class="form-control"/>
+        </div>
+        <div class="form-group">
+            {{'New Password (again)'|translate}}<br />
+            <input type="password" ng-model="formChangePassword.pass2" placeholder="***" required class="form-control"/>
+        </div>
+
+        <div class="alert alert-success form_last_response" ng-show="portal.lastResponse">{{portal.lastResponse|translate}}</div>
+
+        <button type="submit" ng-disabled="first_login_change_password_form.$invalid || portal.is_submit" class="btn btn-primary btn-block">
+            {{'Send'|translate}}
+        </button>
+    </form>
+</div>

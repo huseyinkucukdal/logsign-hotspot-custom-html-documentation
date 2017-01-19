@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Logsign HOTSPOT Custom HTML Documentation</title>
+		<link rel="alternate" type="application/rss+xml" title="logsign.com" href="feed/index.html">
+		<link href="http://fonts.googleapis.com/css?family=Raleway:700,300" rel="stylesheet" type="text/css">
+		<link rel="icon" type="image/ico" href="img/favicon.ico" />
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/prettify.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class="wrapper">
+		<nav>
+		 
+		  	<div class="pull-left">
+		    	<h1><a href="javascript:"><img src="img/icon.png" alt="Logsign HOTSPOT Custom Html Templating" /> <span>Logsign HOTSPOT Custom Html Templating</span></a></h1>
+		    </div>
+		    
+		    <div class="pull-right">
+		    	<a href="./rss/all_forms.txt" style="width: 52px;" target="_blank" class="btn btn-download"><img src="img/download.png" width="25" alt="Download Logsign" />Download</a>
+		    </div>
+		
+		</nav>
+		<header>
+		  <div class="asd">
+		    <h2 class="lone-header">Documentation v-1.0</h2>
+		  </div>
+		</header>
+		<section>
+		  <div class="asd">
+				<!-- 
+					################################################################################
+					NAVIGATION
+					################################################################################
+				-->
+			  	<ul class="docs-nav">
+				    <li><strong>Getting Started</strong></li>
+				    
+				    <li><a href="#welcome" class="cc-active">Welcome</a></li>
+				      
+				    <li class="separator"></li>
+				      
+				    <li><strong>Good to know</strong></li>
+				    
+				    <li><a href="#gtk_embedded_libraries" class="cc-active">Embedded Libraries</a></li>
+				    <li><a href="#gtk_logo_path" class="cc-active">Logo Path</a></li>
+				    <li><a href="#gtk_background_image_path" class="cc-active">Background Image Path</a></li>
+				    <li><a href="#gtk_images" class="cc-active">Images</a></li>
+				    <li><a href="#gtk_style" class="cc-active">Style</a></li>
+				    <li><a href="#gtk_translation" class="cc-active">Translation</a></li>
+				    <li><a href="#gtk_register_mode" class="cc-active">Register Mode</a></li>
+				    <li><a href="#gtk_form_validation" class="cc-active">Form Validation</a></li>
+				    <li><a href="#gtk_form_name" class="cc-active">Form Name</a></li>
+				    <li><a href="#gtk_last_response" class="cc-active">Last Response</a></li>
+				    <li><a href="#gtk_ng_show" class="cc-active">ng-show</a></li>
+				    <li><a href="#gtk_ng_required" class="cc-active">ng-required</a></li>
+				    <li><a href="#gtk_ng_model" class="cc-active">ng-model</a></li>
+				    <li><a href="#gtk_place_holder" class="cc-active">Place Holder</a></li>
+
+				      
+				    <li class="separator"></li>
+				      
+				    <li><strong>Functions</strong></li>
+				    
+				    <li><a href="#functions_changeLocal" class="cc-active">changeLocal( )</a></li>
+				    <li><a href="#functions_sendSms" class="cc-active">sendSms( )</a></li>
+				    <li><a href="#functions_loginWithCN" class="cc-active">loginWithCN( )</a></li>
+				    <li><a href="#functions_signupCC" class="cc-active">signUpCC( )</a></li>
+				    <li><a href="#functions_signUpSponsored" class="cc-active">signUpSponsored( )</a></li>
+				    <li><a href="#functions_verifySms" class="cc-active">verifySms( )</a></li>
+				    <li><a href="#functions_login" class="cc-active">login( )</a></li>
+				    <li><a href="#functions_rememberPassword" class="cc-active">rememberPassword( )</a></li>
+				    <li><a href="#functions_firstLoginChangePassword" class="cc-active">firstLoginChangePassword()</a></li>
+				    <li><a href="#functions_changePassword" class="cc-active">changePassword( )</a></li>
+				    
+				    <li class="separator"></li>
+				    
+				    <li><strong>Form Templates</strong></li>
+				    
+				    <li><a href="#forms_login" class="cc-active">Login</a></li>
+				    <li><a href="#forms_sign_sms" class="cc-active">Sign up with SMS</a></li>
+				    <li><a href="#forms_sms_verify" class="cc-active">Verify SMS</a></li>
+				    <li><a href="#forms_sign_citizenship" class="cc-active">Sign up with Citizenship Number</a></li>
+				    <li><a href="#forms_sign_credit_card" class="cc-active">Sign up with Credit Card</a></li>
+				    <li><a href="#forms_sign_sponsor_email" class="cc-active">Sign up with Sponsor Email</a></li>
+				    <li><a href="#forms_change_password_form" class="cc-active">Change Password Form</a></li>
+				    <li><a href="#forms_first_login_change_password" class="cc-active">First Login Change Password Form</a></li>
+				    <li><a href="#forms_remember_password" class="cc-active">Remember Password Form</a></li>
+				    <!-- <li><a href="#forms_all_forms" class="cc-active">All Forms Together</a></li> -->
+				    
+				    
+				</ul>
+				
+				
+				<!-- 
+					################################################################################
+					CONTENT
+					################################################################################
+				-->
+		    
+				<div class="docs-content">
+					<!-- 
+						################################################################################
+						################################################################################
+						################################################################################
+						GETTING STARTED
+						################################################################################
+					-->
+			        
+			        <h2> <i class="fa fa-hashtag"></i> Getting Started</h2>
+			        <br />
+			        <h3 id="welcome"> Welcome, Let's Build Your Hotspot Frontpage</h3>
+			      
+			        <p>You can design your hotspot prontpage by reading this documentation.You can find here all information you need. Just follow this documentation.</p>
+					<p>Let's begin with what you must know to able customize it.</p>
+					<br/>
+					<hr>
+			       	<br/>
+			        <!-- 
+						################################################################################
+						################################################################################
+						################################################################################
+						GOOD TO KNOW
+						################################################################################
+					-->   
+					<h2><i class="fa fa-hashtag"></i> Good To Know</h2>
+
+					<p>
+						Firts of all you should know that you only have a HTML page and you can not use any external CSS,JAVASCRIPT files or any link.Also because people will see the page as offline you must use BASE64 format images. To convert your images to BASE64 format you can use any BASE64 converter on internet. 
+					</p>
+					<br />
+					<!-- 
+						################################################################################
+						########### EMBEDDED LIBRARIES
+						################################################################################
+					-->
+
+					<h3 id="gtk_embedded_libraries"> Embedded Libraries</h3>
+					<ul>
+			        	<li>Twitter Bootstrap 3.0</li>
+						<li>jQuery</li>
+						<li>Font Awesome</li>
+						<li>Angular JS</li>
+			      	</ul>
+			      	<br>
+				  	
+				  	<!-- 
+						################################################################################
+						########### LOGO PATH
+						################################################################################
+					-->
+
+					<h3 id="gtk_logo_path"> Logo Path </h3>
+					<p>To use logo which is already uploaded from the admin panel you need to give it the right path otherwise,
+						"default logo" is going to be seen.
+						The path for the logo is :
+					</p>
+					<pre class="prettyprint">&lt;img src='' /&gt;</pre>
+					<br>
+					
+					
+					<!-- 
+						################################################################################
+						########### BACKGROUND IMAGE PATH
+						################################################################################
+					-->
+
+					<h3 id="gtk_background_image_path"> Background Image Path</h3>
+					<p>To use background image the image is uploaded on on admin panel <b> Hotspot > Customizations</b> directory. 
+						<br/>
+						The path for the background image can be used in <b> &lt;style&gt; &lt;/style&gt; </b> tag just like below :
+					</p>
+					<pre class="prettyprint">body{background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAABYCAYAAABf0BGmAAAMGGlDQ1BJQ0MgUHJvZmlsZQAASImVVwdUU0kXnldSCAktEAEpoTdBepXeO9LBRkgChBJCIKjY0UUF1y4iWNFVEEXXAshasWBhEbDXDSIqyrpYsKHyTxJA1/3L+e858+Z7d+698937Zt6ZAUDRniUQZKNKAOTwC4TRgT7MxKRkJkkMSEAe0IA+MGex8wXeUVFhAMpo/3d5dxMgkv6apSTWP8f/yhzuPlsAJAoiFM5+ewciI8AgGuyBcICAAgdUG8ws0AgwW8hVhVCggAQyRKcLsNaEpwqw9ZSm9hoX4j9ACBTWSxhOgAKkvjMQnY6jKMggNiaz+HxId4OsQc7g8WBWAzxhJycXIgVqRCbpn4XJ/1vMVPHYrJY6WNYlotUyH68fEE2a/b/WY7/rkJggg==');}</pre>
+				  	<br/><br/>
+					
+
+					<!-- 
+						################################################################################
+						########### IMAGES
+						################################################################################
+					-->
+
+					<h3 id="gtk_images"> Images </h3>
+					<p>
+						Frist of all you should compress your images before conterting to base64. Because image size increases after converting base64. <font style="text-decoration: underline;"> Very large base64 image can cause saving problem on admin panel. </font>
+					</p>
+					<p>
+						You can use images as internal base64 format both at html <b>&lt;img src=" "&gt;</b> tag and in <b>&lt;style&gt;&lt;/style&gt;</b> tags as css property like following examples.
+					</p>
+					<pre class="prettyprint">&lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAABYCAYAAABf0BGmAAAMGGlDQ1BJQ0MgUHJvZmlsZQAASImVVwdUU0kXnldSCAktEAEpoTdBepXeO9LBRkgChBJCIKjY0UUF1y4iWNFVEEXXAshasWBhEbDXDSIqyrpYsKHyTxJA1/3L+e858+Z7d+698937Zt6ZAUDRniUQZKNKAOTwC4TRgT7MxKRkJkkMSEAe0IA+MGex8wXeUVFhAMpo/3d5dxMgkv6apSTWP8f/qyhzuPlsAJAoiFM5+ewciI8AgGuyBcICAAgdUG8ws0AgwW8hVhVCggAQyRKcLsNaEpwqw9ZSm9hoX4j9ACBTWSxhOgAKkvjMQnY6jKMggNiaz+HxId4OsQc7g8WBWAzxhJycXIgVqRCbpn4XJ/1vMVPHYrJY6WNYlotUyH68fEE2a/b/WY7/aiHxXcJfjYFYC9h/tduSgMwnVv66gEb6ETpwZ+o7E2hSwyNK6EXl+1WXD4xTBOzyCsHjPFR9H1AiL5j1Xp/2U2U58QGeKxrinKvHDA88qPtPKVMCUIVXVQk2id3Gdk/KZgsVEYrFy++Vw9YvDT/l+YxANMJvAGYAZhOBHSy/wO/Lc8MyVkBFAAAAABJRU5ErkJggg=="/&gt; </pre>
+					<pre class="prettyprint">&lt;style&gt;<br>  div{background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAABYCAYAAABf0BGmAAAMGGlDQ1BJQ0MgUHJvZmlsZQAASImVVwdUU0kXnldSCAktEAEpoTdBepXeO9LBRkgChBJCIKjY0UUF1y4iWNFVEEXXAshasWBhEbDXDSIqyrpYsKHyTxJA1/3L+e858+Z7d+698937Zt6ZAUDRniUQZKNKAOTwC4TRgT7MxKRkJkkMSEAe0IA+MGex8wXeUVFhAMpo/3d5dxMgkv6apSTWP8f/yhzuPlsAJAoiFM5+ewciI8AgGuyBcICAAgdUG8ws0AgwW8hVhVCggAQyRKcLsNaEpwqw9ZSm9hoX4j9ACBTWSxhOgAKkvjMQnY6jKMggNiaz+HxId4OsQc7g8WBWAzxhJycXIgVqRCbpn4XJ/1vMVPHYrJY6WNYlotUyH68fEE2a/b/WY7/rkJggg==');}<br>&lt;/style&gt;</pre>
+				  	
+				  	<br/><br/>
+					
+					
+					<!-- 
+						################################################################################
+						########### STYLE
+						################################################################################
+					-->
+
+					<h3 id="gtk_style"> Style </h3>
+					<p>
+						Because it is not possible to have external CSS file, CSS must be written in custom html field in <b>&lt;style&gt; &lt;/style&gt;</b> tag.
+					</p>
+					<p>
+						Moreover, <b>&lt;style&gt; &lt;/style&gt;</b> should be written at the top of DOM elements. By this way CSS will be be downloaded before rendering DOM so user will not have to see DOM without style.
+					</p>
+					<pre class="prettyprint">&lt;style&gt; &lt;/style&gt;</pre>
+				  	
+				  	<br/><br/>
+
+				  	
+
+				  	<!-- 
+						################################################################################
+						########### TRANSLATION
+						################################################################################
+					-->
+
+					<h3 id="gtk_translation"> Translation </h3>
+					<p>
+						Some of fundamental English - Turkish translations are already embedded. 
+					</p>
+					<font style="text-decoration: underline;">Embedded words:</font>
+					<ul>
+						<li>Back to login page</li>
+						<li>Birth Year</li>
+						<li>Change Password</li>
+						<li>Citizenship Number :</li>
+						<li>Credit Card Number</li>
+						<li>Daily quota usage</li>
+						<li>Daily time usage</li>
+						<li>Details :</li>
+						<li>Disconnect</li>
+						<li>Download</li>
+						<li>English</li>
+						<li>Expiration Date</li>
+						<li>Edit Mac Addresses</li>
+						<li>Email</li>
+						<li>Error</li>
+						<li>Forget your password</li>						
+						<li>Gender</li>
+						<li>Get credit card to signup</li>
+						<li>Get sms to signup</li>
+						<li>Get sms to signup with passport</li>
+						<li>Get Sponsor to signup</li>
+						<li>Get TC No to signup</li>
+						<li>Gsm Number :</li>
+						<li>hours</li>
+						<li>I agree to Terms of Use</li>
+						<li>Last Name :</li>
+						<li>Login</li>
+						<li>Login with facebook</li>
+						<li>Login with twitter</li>
+						<li>Name :</li>
+						<li>New Password</li>
+						<li>New Password (again)</li>
+						<li>Old Password</li>	
+						<li>Package</li>
+						<li>Package Expire Time</li>
+						<li>Passport Number :</li>
+						<li>Password :</li>
+						<li>Please fill the form</li>
+						<li>Remember me</li>
+						<li>Security Code</li>
+						<li>Select Credit Card</li>
+						<li>Select Packet</li>
+						<li>Select Sponsor</li>
+						<li>Send</li>
+						<li>Sponsor Email</li>
+						<li>Total time usage</li>
+						<li>Total usage time limit</li>
+						<li>Turkish</li>
+						<li>Usage Limits</li>
+						<li>User Informations</li>
+						<li>User Name</li>
+						<li>Username :</li>
+						<li>Upload</li>
+						<li>Verification Code :</li>
+						<li>Verify Code</li>
+					</ul>
+					<pre class="prettyprint">{{'Email'|translate}}</pre>
+					<p>
+						For custom tranaslations, <b> in custom HTML &lt;translater lang="myKey" current="portal.viewSettings.lang"&gt;&lt;/translater&gt; </b> is used. On admin panel Hotspot > Translations directory key is added with turkish and english translation. Then the key is written on the <b>lang="myKey"</b> attribute of <b>translater tag</b>. The <b>current="portal.viewSettings.lang"</b> attribute must remain same.
+					</p>
+					<pre class="prettyprint">&lt;translater lang="myKey" current="portal.viewSettings.lang"&gt;
+...
+&lt;/translater&gt;</pre>
+				  	
+				  	<br/><br/>
+
+
+
+					<!-- 
+						################################################################################
+						########### REGISTER MODE
+						################################################################################
+					-->
+
+					<h3 id="gtk_register_mode"> Register Mode </h3>
+					<p>
+						Register mode is used to define form type. Every login form must have a register mode. Moreover it provides flexibility passage between forms.
+					</p>
+					<p>
+						It is used in ng-show attribute by equalizing form name like following example.
+					</p>	
+					<ul>
+						<li>sign_up_sms</li>
+						<li>sms_verify</li>
+						<li>login</li>
+						<li>change_password</li>
+						<li>sign_up_citizenship_number</li>
+						<li>sign_up_sponsored</li>
+						<li>sign_up_cc</li>
+						<li>remember_password</li>
+						<li>first_login_change_password</li>
+						<li>sign_up_passport_number</li>
+						<li>user_info_page</li>
+					</ul>
+					<pre class="prettyprint">&lt;form ng-submit="sendSms()" name="sms_form" ng-show="portal.register_mode=='sign_up_sms' || portal.register_mode=='sign_up_passport_number'" novalidate &gt;
+...
+&lt;/form&gt;</pre>
+				  	
+				  	<br/><br/>
+
+					<!-- 
+						################################################################################
+						########### FORM VALIDATION
+						################################################################################
+					-->
+
+					<h3 id="gtk_form_validation"> Form Validation </h3>
+					<p>
+						It is possible to check validation for input elements and if input is valid submit button is active otherwise submit button is deactive.
+					</p>
+					<p>
+						For this proccess, <b>ng-required</b> is used at submit button. Also required attribute must be attached to inputs. 
+					</p>
+					<p>
+						First, form name is written. Then <b>.$invalid</b> like following example.
+					</p>
+					<pre class="prettyprint">
+&lt; button type="submit" ng-disabled="sms_form.$invalid"&gt;
+{{'Send'|translate}}
+&lt;/button&gt;</pre>
+				  	<br/><br/>
+
+
+					<!-- 
+						################################################################################
+						########### FORM NAME
+						################################################################################
+					-->
+
+					<h3 id="gtk_form_name"> Form Name </h3>
+					<p>
+						Every form tag (<b>&lt;form&gt;&lt;/form&gt;</b>) must have a name. Form names must be like following list.
+					</p>
+					<ul>
+						<li>sms_form</li>
+						<li>cn_form</li>
+						<li>sponsored_form</li>
+						<li>cc_form</li>
+						<li>verification_form</li>
+						<li>login_form</li>
+						<li>password_remember_form</li>
+						<li>first_login_change_password_form</li>
+						<li>change_password_form</li>
+					</ul>
+					<pre class="prettyprint">&lt;form ng-submit="sendSms()" name="sms_form" ng-show="portal.register_mode=='sign_up_sms' || portal.register_mode=='sign_up_passport_number'" novalidate&gt;
+...
+&lt;/form&gt;</pre>
+				  	
+				  	<br/><br/>
+
+
+					<!-- 
+						################################################################################
+						########### LAST RESPONSE
+						################################################################################
+					-->
+
+					<h3 id="gtk_last_response"> Last Response </h3>
+					<p>
+						Last response is the response is gotten from server after user clicks to submit button. Last response gives information like about the resason user can not login. It is possible to display last response like following example. 
+					</p>
+					<pre class="prettyprint">&lt;div class="alert alert-success form_last_response" ng-show="portal.lastResponse"&gt;
+  {{portal.lastResponse|translate}} 
+&lt;/div&gt;</pre>
+				  	
+				  	<br/><br/>
+
+					<!-- 
+						################################################################################
+						########### NG-SHOW
+						################################################################################
+					-->
+
+					<h3 id="gtk_ng_show"> ng-show </h3>
+					<p>
+						ng-show is used to display or hide form or some elements as pedepending on the parameter it gets. If value of paramet is <b>true</b> it will display otherwise hide.
+					</p>
+					<p>
+						ng-show is especially usefull for passage between forms. For example, when user clicks to submit button of sign_up_sms form user register is done and also login form is displayed.
+					</p>
+					<pre class="prettyprint">&lt;div ng-show="portal.register_mode=='sign_up_sms' || !portal.register_mode"&gt;
+  ...
+&lt;div&gt;
+</pre>
+					<pre class="prettyprint">&lt;div ng-show="portal.lastResponse"&gt;
+  {{portal.lastResponse|translate}}
+&lt;/div&gt;</pre>
+
+					<p><b>!portal.register_mode</b> is used to set first form user is faced.</p>
+				  	
+				  	<br/><br/>
+
+
+					<!-- 
+						################################################################################
+						########### NG-REQUIRED
+						################################################################################
+					-->
+
+					<h3 id="gtk_ng_required"> ng-required </h3>
+					<p>
+						ng-reqired is used at inputs to check validation of inputs.
+					</p>
+					<pre class="prettyprint">&lt;phonenumber-directive ng-cookie-value="form.username" model='portal.form.username' ng-required="portal.user_settings.login_type=='gsm_password'"&gt; &lt;/phonenumber-directive&gt;</pre>
+				  	<pre class="prettyprint"> &lt;input type="text" ng-model="portal.form.name" capitalize placeholder='{{"Name"|translate}}' ng-required="portal.user_settings.show_name_field"  class="form-control"&gt; </pre>
+				  	<pre class="prettyprint"> &lt;input type="text" ng-model="portal.form.lastName" capitalize placeholder='{{"Last Name"|translate}}' ng-required="portal.user_settings.show_last_name_field" &gt; </pre>
+				  	<pre class="prettyprint"> &lt;input type="text" ng-model="portal.form.birthYear" ng-maxlength="4" placeholder="1970" ng-required="portal.user_settings.show_date_of_birth_field" class="form-control" maxlength="4"&gt; </pre>
+				  	<pre class="prettyprint"> &lt;input type="number" ng-model="portal.form.citizenshipNumber" placeholder='{{"Citizenship Number"|translate}}' min="0" pattern="\d*" ng-required="portal.user_settings.show_tc_no_field" class="form-control"&gt; </pre>
+				  	<pre class="prettyprint"> &lt;input type="email" ng-model="portal.form.email" placeholder='{{"Email"|translate}}' ng-required="portal.user_settings.show_email_field"&gt; </pre>
+				  	<br/><br/>
+
+
+					<!-- 
+						################################################################################
+						########### PORTAL FORM (NG-MODEL)
+						################################################################################
+					-->
+
+					<h3 id="gtk_ng_model"> ng-model </h3>
+					<p>
+						<b>portal.form</b> object is already defined at controller. By using ng-model, data of user is created on <b>portal.form</b> base object.
+					</p>
+					<pre class="prettyprint">&lt;input type="password" ng-model="form.password" /&gt;</pre>
+					<pre class="prettyprint">&lt;input type="text" ng-model="form.name" /&gt;</pre>
+				  	
+				  	<br/><br/>
+
+
+					<!-- 
+						################################################################################
+						########### PLACE HOLDER
+						################################################################################
+					-->
+
+					<h3 id="gtk_place_holder"> Place Holder </h3>
+					<p>
+						On <b>placeholder</b> attribute of inputs it is possible to use <b>translation</b> thanks to angularjs. by this way placeholder of inputs has language support.
+					</p>
+					<pre class="prettyprint">&lt;input type="password" ng-model="changePasswordForm.password" placeholder="{{'Password'|translate}}" required class="form-control"/&gt;</pre>
+				  	
+				  	<br/><br/>
+				  	<hr>
+				  	<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				  	
+				  	<!-- 
+						################################################################################
+						################################################################################
+						################################################################################
+						FUNCTIONS
+						################################################################################
+					-->
+
+				  	<h2><i class="fa fa-hashtag"></i> Functions</h2>
+				  	<br />
+
+				  	<!-- 
+						################################################################################
+						########### changeLocal( )
+						################################################################################
+					-->
+
+				  	<h3 id="functions_changeLocal">changeLocal( )</h3>
+				  	<p>
+				    	To change the UI language just pass the language code via <b>changeLocal( )</b> function.
+			      	</p>
+			      	<pre class="prettyprint">&lt;button ng-click="changeLocal('tr_TR');"&gt;Türkçe&lt;/button&gt;<br/>&lt;button ng-click="changeLocal('en_US');"&gt;English&lt;/button&gt;<br>&lt;a href="#" ng-click="changeLocale('tr_TR');"&gt;{{"Turkish"|translate}}&lt;/a&gt;<br>&lt;a href="#" ng-click="changeLocale('en_US');"&gt;{{"Turkish"|translate}}&lt;/a&gt;</pre>
+			      	<br/><br>
+
+			      	<!-- 
+						################################################################################
+						########### sendSms( )
+						################################################################################
+					-->
+
+				  	<h3 id="functions_sendSms">sendSms( )</h3>
+				  	<p>
+				    	This function is used for <b> sign up sms </b> form. It is used for sending verify code by SMS.
+			      	</p>
+			      	<pre class="prettyprint">&lt;form ng-submit="sendSms()"&gt;<br>...<br>&lt;form&gt;</pre>
+			      	<br/><br>	  	
+
+					<!-- 
+						################################################################################
+						########### loginWithCN( )
+						################################################################################
+					-->
+
+				  	<h3 id="functions_loginWithCN">loginWithCN( )</h3>
+				  	<p>
+				    	This function is used for <b> citizenship number </b> form. When user click to submit button user can connect to internet. This function makes register of user number to database.
+			      	</p>
+			      	<pre class="prettyprint">&lt;form ng-submit="loginWithCN()"&gt;<br>...<br>&lt;form&gt;</pre>
+			      	<br/><br>
+			      	<!-- 
+						################################################################################
+						########### signUpCC( )
+						################################################################################
+					-->
+
+				  	<h3 id="functions_signupCC">signUpCC( )</h3>
+				  	<p>
+				    	This function is used for <b> credit card </b> form. When user click to submit button user can connect to internet. This function makes register of user number to database.
+			      	</p>
+			      	<pre class="prettyprint">&lt;form ng-submit="signUpCC( )"&gt;<br>...<br>&lt;form&gt;</pre>
+			      	<br/><br>
+			      	<!-- 
+						################################################################################
+						########### signUpSponsored( )
+						################################################################################
+					-->
+
+				  	<h3 id="functions_signUpSponsored">signUpSponsored( )</h3>
+				  	<p>
+				    	This function is used for <b> sponsored </b> form. When user click to submit button user can connect to internet. This function makes register of user number to database.
+			      	</p>
+			      	<pre class="prettyprint">&lt;form ng-submit="signUpSponsored( )"&gt;<br>...<br>&lt;form&gt;</pre>
+			      	<br/><br>
+			      	<!-- 
+						################################################################################
+						########### verifySms( )
+						################################################################################
+					-->
+
+				  	<h3 id="functions_verifySms">verifySms( )</h3>
+				  	<p>
+				    	This function is used for <b> sms verify </b> form. After user fill the <b> sign up sms</b> form user gets veerification code. The code is used for this form. This function query the code on database if it is correct the user coneects to internet. 
+			      	</p>
+			      	<pre class="prettyprint">&lt;form ng-submit="verifySms( )"&gt;<br>...<br>&lt;form&gt;</pre>
+			      	<br/><br>
+			      	<!-- 
+						################################################################################
+						########### login( )
+						################################################################################
+					-->
+
+				  	<h3 id="functions_login">login( )</h3>
+				  	<p>
+				    	This function is used for <b> login </b> form. After user fill the <b> sign up sms</b> form user gets veerification code. The code is used for this form. This function query the user and code on database if it is correct the user coneects to internet. 
+			      	</p>
+			      	<pre class="prettyprint">&lt;form ng-submit="login( )"&gt;<br>...<br>&lt;form&gt;</pre>			      	
+			      	<br/><br>
+			      	<!-- 
+						################################################################################
+						########### rememberPassword( )
+						################################################################################
+					-->
+				  	<h3 id="functions_rememberPassword">rememberPassword( )</h3>
+				  	<p>
+				    	This function provides remembering the password user already have gotten by sms before. 
+			      	</p>
+			      	<pre class="prettyprint">&lt;form ng-submit="rememberPassword( )"&gt;<br>...<br>&lt;form&gt;</pre>	
+			      	<br/><br>
+			      	<!-- 
+						################################################################################
+						########### firstLoginChangePassword( )
+						################################################################################
+					-->
+
+				  	<h3 id="functions_firstLoginChangePassword">firstLoginChangePassword( )</h3>
+				  	<p>
+				    	This function forces user to change password whenever the user login.
+			      	</p>
+			      	<pre class="prettyprint">&lt;form ng-submit="firstLoginChangePassword( )"&gt;<br>...<br>&lt;form&gt;</pre>	
+			      	<br/><br>
+			      	<!-- 
+						################################################################################
+						########### changePassword( )
+						################################################################################
+					-->
+
+				  	<h3 id="functions_changePassword">changePassword( )</h3>
+				  	<p>
+				    	This function is used for <b>Change password</b> form.
+			      	</p>
+			      	<pre class="prettyprint">&lt;form ng-submit="changePassword( )"&gt;<br>...<br>&lt;form&gt;</pre>	
+			      	<br/><br>
+			      	<hr/> 
+					<br/><br/>
+				  	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				  	<!-- 
+						################################################################################
+						################################################################################
+						################################################################################
+						FORMS TEMPLATES
+						################################################################################
+					-->
+				  	<h2><i class="fa fa-hashtag"></i> Form Templates</h2>
+				  	<p>Click to images to see codes.</p>
+				  	
+				  	<br />
+				  	<!-- 
+						################################################################################
+						########### LOGIN
+						################################################################################
+					-->
+				  	<h3 id="forms_login">login form</h3>
+				  	<p>
+				    	If user is registered user can log-in by using this form.
+			      	</p>
+			      	<a href=""  data-toggle="modal" data-target="#modal1" onclick="toCode('modal_login')"><img src="./img/login.png"></a>
+			      	<br>
+			      	<p>click image to see code</p>
+					<br/>
+							<!-- Modal -->
+					  <div class="modal fade" id="modal1" role="dialog">
+					    <div class="modal-dialog modal-lg">
+					      <div class="modal-content">	        
+					        <div class="modal-body" id="">
+
+<pre>
+<div id="modal_login">
+<div ng-show="portal.register_mode=='login'" >
+    <form name="login_form" ng-submit="login();" ng-show="portal.user_settings.login_type != ''">
+        <div class="form-group" ng-show="portal.user_settings.login_type=='username_password'">
+            {{'Username :'|translate}}<br />
+            <input type="text" ng-model="form.username" placeholder="{{'User Name'|translate}}" ng-required="portal.user_settings.login_type=='username_password'"  class="form-control"/>
+        </div>
+        <div class="form-group" ng-show="portal.user_settings.login_type=='gsm_password'">
+            {{'Gsm Number :'|translate}}<br />
+            <phonenumber-directive ng-cookie-value="form.username" placeholder="'5xx4121356'" model='form.username' ng-required="portal.user_settings.login_type=='gsm_password'" ></phonenumber-directive>
+        </div>
+        <div class="form-group">
+            {{'Password :'|translate}}<br />
+            <input type="password" ng-model="form.password" placeholder="{{'Password'|translate}}" required class="form-control"/>
+        </div>
+
+        <div class="form-group">
+            <input type="checkbox" ng-model="portal.remember_me"/> {{'Remember me'|translate}}
+        </div>
+
+        <div class="form-group" ng-show="portal.viewSettings.terms_of_use_checked">
+            <label class="control-label">
+                <input type="checkbox" ng-model="form.terms_of_use_checked" ng-required="portal.viewSettings.terms_of_use_checked"/>
+                {{'I agree to Terms of Use'|translate}}
+            </label>
+        </div>
+
+        <div class="form-group" ng-show="portal.viewSettings.terms_of_use_checked">
+            <div id="authentication_text_area">
+                <p ng-bind-html="portal.viewSettings['terms_of_use_'+portal.viewSettings.lang]"></p>
+            </div>
+        </div>
+        <div>
+
+            <div class="alert alert-success form_last_response" ng-show="portal.lastResponse">{{portal.lastResponse|translate}}</div>
+
+            <button id="login_username" type="submit" ng-disabled="login_form.$invalid || portal.is_submit" class="btn btn-primary btn-block">
+                {{'Login'|translate}}
+            </button>
+
+            <div ng-show="portal.isMacEditEnabled">
+                <br>
+                <a href="#/mac_edit" class="btn btn-primary btn-block">
+                    {{'Edit Mac Addresses'|translate}}
+                </a>
+            </div>
+
+        </div>
+    </form>
+</div>
+</div>
+</pre>
+
+
+					        </div>
+					      </div>
+					    </div>
+					  </div>
+			      	<!-- 
+						################################################################################
+						########### SIGN UP WITH SMS
+						################################################################################
+					-->
+				  	<h3 id="forms_sign_sms">Sign Up SMS Form</h3>
+				  	<p>
+				    	User can make registration on this form. Moreover user gets a code to mobile phone.
+			      	</p>
+			      	<a href=""  data-toggle="modal" data-target="#modal2" onclick="toCode('modal_sup')"><img src="./img/sign_up_sms.png"></a>
+			      	<br>
+			      	<p>click image to see code</p>
+					<br/>
+							<!-- Modal -->
+					  <div class="modal fade" id="modal2" role="dialog">
+					    <div class="modal-dialog modal-lg">
+					      <div class="modal-content">	        
+					        <div class="modal-body" id="">
+
+<pre>
+<div id="modal_sup">
+<form ng-submit="sendSms()" name="sms_form" ng-show="portal.register_mode=='sign_up_sms' || portal.register_mode=='sign_up_passport_number'" novalidate>
+    <div class="form-group" ng-show="portal.user_settings.show_name_field">
+        {{'Name :'|translate}}<br />
+        <input type="text" ng-model="portal.form.name" capitalize placeholder='{{"Name"|translate}}' ng-required="portal.user_settings.show_name_field"  class="form-control">
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_last_name_field">
+        {{'Last Name :'|translate}}<br/>
+        <input type="text" ng-model="portal.form.lastName" capitalize placeholder='{{"Last Name"|translate}}' ng-required="portal.user_settings.show_last_name_field"  class="form-control">
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_date_of_birth_field">
+        {{'Birth Year'|translate}} :<br/>
+        <input type="text" ng-model="portal.form.birthYear" ng-maxlength="4" placeholder="1970" ng-required="portal.user_settings.show_date_of_birth_field" class="form-control" maxlength="4"/>
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_tc_no_field">
+        {{'Citizenship Number :'|translate}}<br/>
+        <input type="number" ng-model="portal.form.citizenshipNumber" placeholder='{{"Citizenship Number"|translate}}' min="0" pattern="\d*" ng-required="portal.user_settings.show_tc_no_field" class="form-control">
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_email_field">
+        {{'Email'|translate}} : <br/>
+        <input type="email" ng-model="portal.form.email" placeholder='{{"Email"|translate}}' ng-required="portal.user_settings.show_email_field" class="form-control">
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_passport_field || portal.register_mode=='sign_up_passport_number'">
+        {{'Passport Number :'|translate}}<br/>
+        <input type="text" ng-model="portal.form.passport"  class="form-control" ng-required="portal.register_mode=='sign_up_passport_number'">
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_details_field">
+        {{'Details :'|translate}}<br/>
+        <input type="text" ng-model="portal.form.details"  class="form-control">
+    </div>
+
+    <div class="form-group">
+        {{'Gsm Number :'|translate}}<br/>
+        <phonenumber-directive placeholder="'5xx4121356'" ng-required="true" model='portal.form.dstgsm'></phonenumber-directive>
+    </div>
+
+    <div class="form-group" ng-show="portal.viewSettings.terms_of_use_checked">
+        <label class="control-label">
+            <input type="checkbox" ng-model="form.terms_of_use_checked" ng-required="portal.viewSettings.terms_of_use_checked"/>
+            {{'I agree to Terms of Use'|translate}}
+        </label>
+    </div>
+
+    <div ng-show="portal.viewSettings.terms_of_use_checked" id="authentication_text_area">
+        <p ng-bind-html="portal.viewSettings['terms_of_use_'+portal.viewSettings.lang]"></p>
+    </div>
+
+
+    <div class="alert alert-success form_last_response" ng-show="portal.lastResponse">{{portal.lastResponse|translate}}</div>
+
+    <button type="submit" ng-disabled="sms_form.$invalid || portal.is_submit" class="btn btn-primary btn-block">
+        {{'Send'|translate}}
+    </button>
+</form>
+</div>
+</pre>
+
+
+					        </div>
+					      </div>
+					    </div>
+					  </div>
+			      	<!-- 
+						################################################################################
+						########### SMS VERIFY
+						################################################################################
+					-->
+				  	<h3 id="forms_sms_verify">SMS Verify Form</h3>
+				  	<p>
+				        The code user got from his/her mobile phone is used on this form. User can verify the code on this form and connect to internet.
+			      	</p>
+			      	<a href=""  data-toggle="modal" data-target="#modal3" onclick="toCode('modal_sms_verify')"><img src="./img/sms_verify.png"></a>
+			      	<br>
+			      	<p>click image to see code</p>
+					<br/>
+							<!-- Modal -->
+					  <div class="modal fade" id="modal3" role="dialog">
+					    <div class="modal-dialog modal-lg">
+					      <div class="modal-content">	        
+					        <div class="modal-body">
+
+<pre>
+<div id="modal_sms_verify">
+<form class="form-horizontal" name="verification_form" ng-show="portal.register_mode=='sms_verify'"  ng-submit="verifySms()" novalidate>
+    <div class="form-group">
+        {{'Verification Code :'|translate}} <br/>
+        <input class="form-control" type="text" ng-model="portal.form.code" placeholder="{{'Verification Code'|translate}}" required>
+    </div>
+    <div class="alert alert-success form_last_response" ng-show="portal.lastResponse">{{portal.lastResponse|translate}}</div>
+    <button id="login_sms" type="submit" ng-disabled="verification_form.$invalid" class="btn btn-primary btn-block">{{'Verify Code'|translate}}</button>
+</form>
+</div>
+</pre>
+
+
+					        </div>
+					      </div>
+					    </div>
+					  </div>
+			      	<!-- 
+						################################################################################
+						########### SIGN UP WITH CITIZENSHIP NUMBER
+						################################################################################
+					-->
+				  	<h3 id="forms_sign_citizenship">Sign Up With Citizenship Number form</h3>
+				  	<p>
+				      The sign-up with citizenship number form.
+			      	</p>
+			      	<a href=""  data-toggle="modal" data-target="#modal4" onclick="toCode('modal_citizen')"><img src="./img/citizen.png"></a>
+			      	<br>
+			      	<p>click image to see code</p>
+					<br/>
+							<!-- Modal -->
+					  <div class="modal fade" id="modal4" role="dialog">
+					    <div class="modal-dialog modal-lg">
+					      <div class="modal-content">	        
+					        <div class="modal-body">
+
+<pre>
+<div id="modal_citizen">
+<form ng-submit="loginWithCN()" name="cn_form" ng-show="portal.register_mode=='sign_up_citizenship_number' || !portal.register_mode" novalidate>
+    <div class="form-group">
+        {{'Name :'|translate}}<br />
+        <input type="text" ng-model="portal.form.name" placeholder='{{"Name"|translate}}' required capitalize class="form-control">
+    </div>
+
+    <div class="form-group">
+        {{'Last Name :'|translate}}<br/>
+        <input type="text" ng-model="portal.form.lastName" placeholder='{{"Last Name"|translate}}' required capitalize class="form-control">
+    </div>
+
+    <div class="form-group">
+        {{'Birth Year'|translate}} :<br/>
+        <input type="text" ng-model="portal.form.birthYear" ng-maxlength="4" placeholder="1970" required class="form-control" maxlength="4"/>
+    </div>
+
+    <div class="form-group">
+        {{'Citizenship Number :'|translate}}<br/>
+        <input type="number" ng-model="portal.form.citizenshipNumber" placeholder='{{"Citizenship Number"|translate}}' min="0" pattern="\d*" required class="form-control">
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_email_field">
+        {{'Email'|translate}} : <br/>
+        <input type="email" ng-model="portal.form.email" placeholder='{{"Email"|translate}}' ng-required="portal.user_settings.show_email_field" class="form-control">
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_passport_field">
+        {{'Passport Number :'|translate}}<br/>
+        <input type="text" ng-model="portal.form.passport"  class="form-control">
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_details_field">
+        {{'Details :'|translate}}<br/>
+        <input type="text" ng-model="portal.form.details"  class="form-control">
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_gsm_field || portal.user_settings.sign_up_type_citizenship_number == 'cn_sms_register'">
+        {{'Gsm Number :'|translate}}<br/>
+        <phonenumber-directive placeholder="'5xx4121356'" model='portal.form.dstgsm' ng-required="portal.user_settings.show_gsm_field || portal.user_settings.sign_up_type_citizenship_number == 'cn_sms_register'" ></phonenumber-directive>
+    </div>
+
+    <div class="form-group" ng-show="portal.viewSettings.terms_of_use_checked">
+        <label class="control-label">
+            <input type="checkbox" ng-model="form.terms_of_use_checked" ng-required="portal.viewSettings.terms_of_use_checked"/>
+            {{'I agree to Terms of Use'|translate}}
+        </label>
+    </div>
+
+    <div ng-show="portal.viewSettings.terms_of_use_checked" id="authentication_text_area">
+        <p ng-bind-html="portal.viewSettings['terms_of_use_'+portal.viewSettings.lang]"></p>
+    </div>
+    
+    <div class="alert alert-success form_last_response" ng-show="portal.lastResponse">{{portal.lastResponse|translate}}</div>
+
+    <button type="submit" ng-disabled="cn_form.$invalid || portal.is_submit" class="btn btn-primary btn-block">
+        <translater lang="giris" current="portal.viewSettings.lang"></translater>
+    </button>
+</form>
+</div>
+</pre>
+
+
+					        </div>
+					      </div>
+					    </div>
+					  </div>
+			      	<!-- 
+						################################################################################
+						########### SIGN UP WITH CREDIT CARD
+						################################################################################
+					-->
+				  	<h3 id="forms_sign_credit_card">Sign Up With Credit Card Form</h3>
+				  	<p>
+				      The sign-up with credit card form.
+			      	</p>
+			      	<a href=""  data-toggle="modal" data-target="#modal5" onclick="toCode('modal_cc')"><img src="./img/cc.png"></a>
+			      	<br>
+			      	<p>click image to see code</p>
+					<br/>
+							<!-- Modal -->
+					  <div class="modal fade" id="modal5" role="dialog">
+					    <div class="modal-dialog modal-lg">
+					      <div class="modal-content">	        
+					        <div class="modal-body">
+
+<pre>
+<div id="modal_cc">
+<form ng-submit="loginWithCN()" name="cn_form" ng-show="portal.register_mode=='sign_up_citizenship_number' || !portal.register_mode" novalidate>
+    <div class="form-group">
+        {{'Name :'|translate}}<br />
+        <input type="text" ng-model="portal.form.name" placeholder='{{"Name"|translate}}' required capitalize class="form-control">
+    </div>
+
+    <div class="form-group">
+        {{'Last Name :'|translate}}<br/>
+        <input type="text" ng-model="portal.form.lastName" placeholder='{{"Last Name"|translate}}' required capitalize class="form-control">
+    </div>
+
+    <div class="form-group">
+        {{'Birth Year'|translate}} :<br/>
+        <input type="text" ng-model="portal.form.birthYear" ng-maxlength="4" placeholder="1970" required class="form-control" maxlength="4"/>
+    </div>
+
+    <div class="form-group">
+        {{'Citizenship Number :'|translate}}<br/>
+        <input type="number" ng-model="portal.form.citizenshipNumber" placeholder='{{"Citizenship Number"|translate}}' min="0" pattern="\d*" required class="form-control">
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_email_field">
+        {{'Email'|translate}} : <br/>
+        <input type="email" ng-model="portal.form.email" placeholder='{{"Email"|translate}}' ng-required="portal.user_settings.show_email_field" class="form-control">
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_passport_field">
+        {{'Passport Number :'|translate}}<br/>
+        <input type="text" ng-model="portal.form.passport"  class="form-control">
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_details_field">
+        {{'Details :'|translate}}<br/>
+        <input type="text" ng-model="portal.form.details"  class="form-control">
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_gsm_field || portal.user_settings.sign_up_type_citizenship_number == 'cn_sms_register'">
+        {{'Gsm Number :'|translate}}<br/>
+        <phonenumber-directive placeholder="'5xx4121356'" model='portal.form.dstgsm' ng-required="portal.user_settings.show_gsm_field || portal.user_settings.sign_up_type_citizenship_number == 'cn_sms_register'" ></phonenumber-directive>
+    </div>
+
+    <div class="form-group" ng-show="portal.viewSettings.terms_of_use_checked">
+        <label class="control-label">
+            <input type="checkbox" ng-model="form.terms_of_use_checked" ng-required="portal.viewSettings.terms_of_use_checked"/>
+            {{'I agree to Terms of Use'|translate}}
+        </label>
+    </div>
+
+    <div ng-show="portal.viewSettings.terms_of_use_checked" id="authentication_text_area">
+        <p ng-bind-html="portal.viewSettings['terms_of_use_'+portal.viewSettings.lang]"></p>
+    </div>
+
+
+    <div class="alert alert-success form_last_response" ng-show="portal.lastResponse">{{portal.lastResponse|translate}}</div>
+
+    <button type="submit" ng-disabled="cn_form.$invalid || portal.is_submit" class="btn btn-primary btn-block">
+        <translater lang="giris" current="portal.viewSettings.lang"></translater>
+    </button>
+</form>
+</div>
+</pre>
+
+
+					        </div>
+					      </div>
+					    </div>
+					  </div>
+
+			      	<!-- 
+						################################################################################
+						########### SIGN UP WITH SPONSOR EMAIL
+						################################################################################
+					-->
+				  	<h3 id="forms_sign_sponsor_email">Sign Up With Sponsor Email Form</h3>
+				  	<p>
+				      The sign-up with sponsor email form.
+			      	</p>
+			      	<a href=""  data-toggle="modal" data-target="#modal6" onclick="toCode('modal_sponsor')"><img src="./img/sponsor.png"></a>
+			      	<br>
+			      	<p>click image to see code</p>
+					<br/>
+							<!-- Modal -->
+					  <div class="modal fade" id="modal6" role="dialog">
+					    <div class="modal-dialog modal-lg">
+					      <div class="modal-content">	        
+					        <div class="modal-body">
+
+<pre>
+<div id="modal_sponsor">
+<form ng-submit="signUpSponsored()"  name="sponsored_form" ng-show="portal.register_mode=='sign_up_sponsored'" novalidate>
+    <div class="form-group" ng-show="portal.user_settings.show_name_field">
+        {{'Name :'|translate}}<br />
+        <input type="text" ng-model="portal.sign_up_form.name" capitalize placeholder='{{"Name"|translate}}' ng-required="portal.user_settings.show_name_field"  class="form-control">
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_last_name_field">
+        {{'Last Name :'|translate}}<br/>
+        <input type="text" ng-model="portal.sign_up_form.lastName" capitalize placeholder='{{"Last Name"|translate}}' ng-required="portal.user_settings.show_last_name_field"  class="form-control">
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_date_of_birth_field">
+        {{'Birth Year'|translate}} :<br/>
+        <input type="text" ng-model="portal.sign_up_form.birthYear" ng-maxlength="4" placeholder="1970" ng-required="portal.user_settings.show_date_of_birth_field" class="form-control" maxlength="4" />
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_tc_no_field">
+        {{'Citizenship Number :'|translate}}<br/>
+        <input type="number" ng-model="portal.sign_up_form.citizenshipNumber" placeholder='{{"Citizenship Number"|translate}}' min="0" pattern="\d*" ng-required="portal.user_settings.show_tc_no_field" class="form-control">
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_email_field">
+        {{'Email'|translate}} : <br/>
+        <input type="email" ng-model="portal.sign_up_form.email" placeholder='{{"Email"|translate}}' ng-required="portal.user_settings.show_email_field" class="form-control">
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.sign_up_sponsored && portal.user_settings.sponsor_mail_type == 'domain'">
+        {{'Sponsor Email'|translate}} :<br/>
+        <div ng-switch="portal.user_settings.sponsorEmailDomain">
+            <div class="row">
+                <div class="col-sm-6">
+                    <input type="text" class="form-control"  ng-model="portal.sign_up_form.sponsorEmail" placeholder='{{"Sponsor Email"|translate}}'  ng-required="portal.user_settings.sponsorEmailDomain && portal.user_settings.sign_up_sponsored && portal.user_settings.sponsor_mail_type == 'domain'"/>
+                </div>
+                <div class="col-sm-6">
+                    {{portal.user_settings.sponsorEmailDomain}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.sign_up_sponsored && (portal.user_settings.sponsor_mail_type == 'domain_list' || portal.user_settings.sponsor_mail_type == 'email')">
+        {{'Sponsor Email'|translate}} :<br/>
+        <div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <input type="text" class="form-control"  ng-model="portal.sign_up_form.sponsorEmail" placeholder='{{"Sponsor Email"|translate}}'  ng-required="portal.user_settings.sign_up_sponsored && (portal.user_settings.sponsor_mail_type == 'domain_list' || portal.user_settings.sponsor_mail_type == 'email')"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.sign_up_sponsored && portal.user_settings.sponsor_mail_type == 'list'">
+        {{'Sponsor Email'|translate}} :<br/>
+        <select class="form-control" ng-model="portal.sign_up_form.sponsorEmail" ng-required="portal.user_settings.sign_up_sponsored && portal.user_settings.sponsor_mail_type == 'list'">
+            <option value="">{{'Select Sponsor'|translate}}</option>
+            <option ng-repeat="item in portal.user_settings.sponsore_list" value="{{item.email}}">{{item.name}}</option>
+        </select>
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_passport_field">
+        {{'Passport Number :'|translate}}<br/>
+        <input type="text" ng-model="portal.sign_up_form.passport" class="form-control">
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_details_field">
+        {{'Details :'|translate}}<br/>
+        <input type="text" ng-model="portal.form.details"  class="form-control">
+    </div>
+
+    <div class="form-group">
+        {{'Gsm Number :'|translate}}<br/>
+        <phonenumber-directive placeholder="'5xx4121356'" model='portal.sign_up_form.dstgsm' ng-required="true" ></phonenumber-directive>
+    </div>
+
+    <div class="form-group" ng-show="portal.viewSettings.terms_of_use_checked">
+        <label class="control-label">
+            <input type="checkbox" ng-model="form.terms_of_use_checked" ng-required="portal.viewSettings.terms_of_use_checked"/>
+            {{'I agree to Terms of Use'|translate}}
+        </label>
+    </div>
+
+    <div ng-show="portal.viewSettings.terms_of_use_checked" id="authentication_text_area">
+        <p ng-bind-html="portal.viewSettings['terms_of_use_'+portal.viewSettings.lang]"></p>
+    </div>
+
+
+    <div class="alert alert-success form_last_response" ng-show="portal.lastResponse">{{portal.lastResponse|translate}}</div>
+
+    <button type="submit" ng-disabled="sponsored_form.$invalid || portal.is_submit || sponsor_mail_send" class="btn btn-primary btn-block">
+        {{'Send'|translate}}
+    </button>
+</form>
+</div>
+</pre>
+
+
+					        </div>
+					      </div>
+					    </div>
+					  </div>
+			      	<!-- 
+						################################################################################
+						########### CHANGE PASSWORD FORM
+						################################################################################
+					-->
+				  	<h3 id="forms_change_password_form">Change Password Form</h3>
+				  	<p>
+				      The change password form.
+			      	</p>
+			      	<a href=""  data-toggle="modal" data-target="#modal7" onclick="toCode('modal_change_pass')"><img src="./img/change_pass.png"></a>
+			      	<br>
+			      	<p>click image to see code</p>
+					<br/>
+							<!-- Modal -->
+					  <div class="modal fade" id="modal7" role="dialog">
+					    <div class="modal-dialog modal-lg">
+					      <div class="modal-content">	        
+					        <div class="modal-body">
+
+<pre>
+<div id="modal_change_pass">
+<div ng-show="portal.register_mode=='change_password'">
+    <form name="change_password_form" ng-submit="changePassword()">
+        <div class="form-group" ng-show="portal.user_settings.login_type=='username_password'">
+            {{'Username :'|translate}}<br />
+            <input type="text" ng-model="changePasswordForm.username" placeholder="{{'User Name'|translate}}" required class="form-control"/>
+        </div>
+
+        <div class="form-group" ng-show="portal.user_settings.login_type=='gsm_password'">
+            {{'Gsm Number :'|translate}}<br />
+            <phonenumber-directive placeholder="'5xx4121356'" model='changePasswordForm.username' ng-required="portal.user_settings.login_type=='gsm_password'" ></phonenumber-directive>
+        </div>
+
+        <div class="form-group">
+            {{'Old Password'|translate}} :<br />
+            <input type="password" ng-model="changePasswordForm.password" placeholder="{{'Password'|translate}}" required class="form-control"/>
+        </div>
+
+        <div class="form-group">
+            {{'New Password'|translate}} :<br />
+            <input type="password" ng-model="changePasswordForm.password1" placeholder="***" required class="form-control"/>
+        </div>
+        <div class="form-group">
+            {{'New Password (again)'|translate}} :<br />
+            <input type="password" ng-model="changePasswordForm.password2" placeholder="***" required class="form-control"/>
+        </div>
+
+        <div class="alert alert-success form_last_response" ng-show="portal.lastResponse">{{portal.lastResponse|translate}}</div>
+
+        <button type="submit" ng-disabled="change_password_form.$invalid || portal.is_submit" class="btn btn-primary btn-block">
+            {{'Send'|translate}}
+        </button>
+
+    </form>
+</div>
+</div>
+</pre>
+
+
+					        </div>
+					      </div>
+					    </div>
+					  </div>
+			      	<!-- 
+						################################################################################
+						########### REMEMBER PASSWORD FORM
+						################################################################################
+					-->
+				  	<h3 id="forms_remember_password">Remember Password Form</h3>
+				  	<p>
+				      The remember password form.
+			      	</p>
+			      	<a href=""  data-toggle="modal" data-target="#modal8" onclick="toCode('modal_remember_pass')"><img src="./img/remember_pass.png"></a>
+			      	<br>
+			      	<p>click image to see code</p>
+					<br/>
+							<!-- Modal -->
+					  <div class="modal fade" id="modal8" role="dialog">
+					    <div class="modal-dialog modal-lg">
+					      <div class="modal-content">	        
+					        <div class="modal-body">
+
+<pre>
+<div id="modal_remember_pass">
+<div ng-show="portal.register_mode=='remember_password'" >
+    <form  name="password_remember_form" ng-submit="rememberPassword()">
+        <div class="form-group" ng-show="portal.user_settings.passwordRememberMethod == 'sms'">
+            {{'Gsm Number :'|translate}}<br />
+            <phonenumber-directive placeholder="'5xx4121356'" model='formPasswordRemember.username' ng-required="portal.user_settings.passwordRememberMethod == 'sms'" ></phonenumber-directive>
+        </div>
+
+        <div class="form-group" ng-show="portal.user_settings.passwordRememberMethod == 'mail'">
+            {{'Username :'|translate}}<br />
+            <input type="text" ng-model="formPasswordRemember.email"
+                   placeholder="{{'Email or Username'|translate}}"
+                   ng-required="portal.user_settings.passwordRememberMethod == 'mail'"
+                   class="form-control"/>
+        </div>
+
+        <div class="alert alert-success form_last_response" ng-show="portal.lastResponse">{{portal.lastResponse|translate}}</div>
+
+
+        <button type="submit" ng-disabled="password_remember_form.$invalid || portal.is_submit" class="btn btn-primary btn-block">
+            {{'Send'|translate}}
+        </button>
+    </form>
+</div>
+</div>
+</pre>
+
+
+					        </div>
+					      </div>
+					    </div>
+					  </div>
+
+			      	<!-- 
+						################################################################################
+						########### FIRST LOGIN CHANGE PASSWORD FORM
+						################################################################################
+					-->
+				  	<h3 id="forms_first_login_change_password">First Login Change Password Form</h3>
+				  	<p>
+				      The fist login change password form.
+			      	</p>
+			      	<a href=""  data-toggle="modal" data-target="#modal9" onclick="toCode('modal_flogin_c_pass')"><img src="./img/first_login_change_pass.png"></a>
+			      	<br>
+			      	<p>click image to see code</p>
+					<br/>
+							<!-- Modal -->
+					  <div class="modal fade" id="modal9" role="dialog">
+					    <div class="modal-dialog modal-lg">
+					      <div class="modal-content">	        
+					        <div class="modal-body">
+
+<pre>
+<div id="modal_flogin_c_pass">
+<div ng-show="portal.register_mode=='first_login_change_password'">
+    <form name="first_login_change_password_form" ng-submit="firstLoginChangePassword()">
+        <div class="form-group">
+            {{'New Password'|translate}}<br />
+            <input type="password" ng-model="formChangePassword.pass1" placeholder="***" required class="form-control"/>
+        </div>
+        <div class="form-group">
+            {{'New Password (again)'|translate}}<br />
+            <input type="password" ng-model="formChangePassword.pass2" placeholder="***" required class="form-control"/>
+        </div>
+
+        <div class="alert alert-success form_last_response" ng-show="portal.lastResponse">{{portal.lastResponse|translate}}</div>
+
+        <button type="submit" ng-disabled="first_login_change_password_form.$invalid || portal.is_submit" class="btn btn-primary btn-block">
+            {{'Send'|translate}}
+        </button>
+    </form>
+</div>
+</div>
+</pre>
+
+
+					        </div>
+					      </div>
+					    </div>
+					  </div>	
+			      	
+<!-- 						################################################################################
+						########### ALL FORMS
+						################################################################################
+					
+				  	<h3 id="forms_first_login_change_password">All Forms Together</h3>
+				  	<p>
+				      Codes of all forms examples together file is attached to following link.
+			      	</p>
+			      	<a href="./rss/all_forms.rss" target="_blank">Click to see code</a>	 -->
+					<br/>			      				   		 
+					<br/><br/><br/><br/><br/><br/><br/><br/>
+			      	
+			      	   	
+			      	
+			      	
+
+		  	</div>
+		</section>
+		<section class="vibrant centered">
+		  <div class="">
+		    <h4> For more information, do not forget to visit our support platform <a href='http://support.logsign.net' target="_blank">support.logsign.net</a></h4>
+		  </div>
+		</section>
+		<footer>
+		  <div class="">
+		    <p> &copy; Copyright Logsign. All Rights Reserved.</p>
+		  </div>
+		</footer>
+		</div>
+		<script src="js/jquery.min.js"></script> 
+		<script type="text/javascript" src="js/prettify/prettify.js"></script> 
+		<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&skin=sunburst"></script>
+		
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="js/layout.js"></script>
+	</body>
+</html>

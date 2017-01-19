@@ -1,0 +1,8 @@
+<form class="form-horizontal" name="verification_form" ng-show="portal.register_mode=='sms_verify'"  ng-submit="verifySms()" novalidate>
+    <div class="form-group">
+        {{'Verification Code :'|translate}} <br/>
+        <input class="form-control" type="text" ng-model="portal.form.code" placeholder="{{'Verification Code'|translate}}" required>
+    </div>
+    <div class="alert alert-success form_last_response" ng-show="portal.lastResponse">{{portal.lastResponse|translate}}</div>
+    <button id="login_sms" type="submit" ng-disabled="verification_form.$invalid" class="btn btn-primary btn-block">{{'Verify Code'|translate}}</button>
+</form>

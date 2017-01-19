@@ -1,0 +1,92 @@
+<form ng-submit="signUpSponsored()"  name="sponsored_form" ng-show="portal.register_mode=='sign_up_sponsored'" novalidate>
+    <div class="form-group" ng-show="portal.user_settings.show_name_field">
+        {{'Name :'|translate}}<br />
+        <input type="text" ng-model="portal.sign_up_form.name" capitalize placeholder='{{"Name"|translate}}' ng-required="portal.user_settings.show_name_field"  class="form-control">
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_last_name_field">
+        {{'Last Name :'|translate}}<br/>
+        <input type="text" ng-model="portal.sign_up_form.lastName" capitalize placeholder='{{"Last Name"|translate}}' ng-required="portal.user_settings.show_last_name_field"  class="form-control">
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_date_of_birth_field">
+        {{'Birth Year'|translate}} :<br/>
+        <input type="text" ng-model="portal.sign_up_form.birthYear" ng-maxlength="4" placeholder="1970" ng-required="portal.user_settings.show_date_of_birth_field" class="form-control" maxlength="4" />
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_tc_no_field">
+        {{'Citizenship Number :'|translate}}<br/>
+        <input type="number" ng-model="portal.sign_up_form.citizenshipNumber" placeholder='{{"Citizenship Number"|translate}}' min="0" pattern="\d*" ng-required="portal.user_settings.show_tc_no_field" class="form-control">
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_email_field">
+        {{'Email'|translate}} : <br/>
+        <input type="email" ng-model="portal.sign_up_form.email" placeholder='{{"Email"|translate}}' ng-required="portal.user_settings.show_email_field" class="form-control">
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.sign_up_sponsored && portal.user_settings.sponsor_mail_type == 'domain'">
+        {{'Sponsor Email'|translate}} :<br/>
+        <div ng-switch="portal.user_settings.sponsorEmailDomain">
+            <div class="row">
+                <div class="col-sm-6">
+                    <input type="text" class="form-control"  ng-model="portal.sign_up_form.sponsorEmail" placeholder='{{"Sponsor Email"|translate}}'  ng-required="portal.user_settings.sponsorEmailDomain && portal.user_settings.sign_up_sponsored && portal.user_settings.sponsor_mail_type == 'domain'"/>
+                </div>
+                <div class="col-sm-6">
+                    {{portal.user_settings.sponsorEmailDomain}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.sign_up_sponsored && (portal.user_settings.sponsor_mail_type == 'domain_list' || portal.user_settings.sponsor_mail_type == 'email')">
+        {{'Sponsor Email'|translate}} :<br/>
+        <div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <input type="text" class="form-control"  ng-model="portal.sign_up_form.sponsorEmail" placeholder='{{"Sponsor Email"|translate}}'  ng-required="portal.user_settings.sign_up_sponsored && (portal.user_settings.sponsor_mail_type == 'domain_list' || portal.user_settings.sponsor_mail_type == 'email')"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.sign_up_sponsored && portal.user_settings.sponsor_mail_type == 'list'">
+        {{'Sponsor Email'|translate}} :<br/>
+        <select class="form-control" ng-model="portal.sign_up_form.sponsorEmail" ng-required="portal.user_settings.sign_up_sponsored && portal.user_settings.sponsor_mail_type == 'list'">
+            <option value="">{{'Select Sponsor'|translate}}</option>
+            <option ng-repeat="item in portal.user_settings.sponsore_list" value="{{item.email}}">{{item.name}}</option>
+        </select>
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_passport_field">
+        {{'Passport Number :'|translate}}<br/>
+        <input type="text" ng-model="portal.sign_up_form.passport" class="form-control">
+    </div>
+
+    <div class="form-group" ng-show="portal.user_settings.show_details_field">
+        {{'Details :'|translate}}<br/>
+        <input type="text" ng-model="portal.form.details"  class="form-control">
+    </div>
+
+    <div class="form-group">
+        {{'Gsm Number :'|translate}}<br/>
+        <phonenumber-directive placeholder="'5xx4121356'" model='portal.sign_up_form.dstgsm' ng-required="true" ></phonenumber-directive>
+    </div>
+
+    <div class="form-group" ng-show="portal.viewSettings.terms_of_use_checked">
+        <label class="control-label">
+            <input type="checkbox" ng-model="form.terms_of_use_checked" ng-required="portal.viewSettings.terms_of_use_checked"/>
+            {{'I agree to Terms of Use'|translate}}
+        </label>
+    </div>
+
+    <div ng-show="portal.viewSettings.terms_of_use_checked" id="authentication_text_area">
+        <p ng-bind-html="portal.viewSettings['terms_of_use_'+portal.viewSettings.lang]"></p>
+    </div>
+
+
+    <div class="alert alert-success form_last_response" ng-show="portal.lastResponse">{{portal.lastResponse|translate}}</div>
+
+    <button type="submit" ng-disabled="sponsored_form.$invalid || portal.is_submit || sponsor_mail_send" class="btn btn-primary btn-block">
+        {{'Send'|translate}}
+    </button>
+</form>
